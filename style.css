@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+div.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.text-mensager {
+    position: fixed;
+    font-size: 1.2em;
+    color: white;
+    top: 8%;
+    margin: 10px;
+}
+
+/* estilos da capa e propiedades padrão da folha. */
+
+.folha {
+    background-color: #1a1a1a;
+    padding-bottom: 7px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #003380;
+    width: 100%;
+    height: 0;
+    display: flex;
+    z-index: 999;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar.ativar {
+    height: 50px;
+    animation: down 2s ease;
+}
+
+@keyframes down {
+    from {
+        height: 0;
+    } to {
+        height: 50px;
+    }
+}
+
+.links {
+    border: 2px solid transparent;
+    background-color: lightgray;
+    padding:8px;
+    border-radius:13px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    font-size:1rem;
+    transition: .5s ease;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.links:hover {
+    background-color:white;
+}
+
+.links:active {
+    background-color: lightgray;
+}
+
+.links.ativar {
+    opacity: 1;
+    animation: left 2s ease;
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+/*Estilização da capa*/
+
+.titulo-capa {
+    color:lightgray ;
+    text-align: center;
+    margin: 15px 0;
+    font-size:38px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.fotos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.perfil {
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.perfil img{
+    border-radius:100%;
+    border: 3px solid white;
+    width: 180px;
+    height: 180px;
+}
+
+.perfil p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    color: lightgray;
+    font-family: monospace;
+}
+
+.descricao-capa {
+    text-align: center;
+    text-transform: uppercase;
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+div#main {
+    opacity: 0;
+}
+
+div#main.activeFadeIn {
+    opacity: 1;
+    animation: fade-in 3s ease;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+div#main.activeFadeOut {
+    opacity: 0;
+    animation: fade-out 3s ease;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+/*Estilos padrões de todas as aulas*/
+
+
+.topico-texto {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3rem;
+    text-transform: uppercase;  
+    color: #8cb2ec;
+}
+
+.definicao-texto {
+    font-size: 1.1rem;
+    font-family: monospace;
+    padding: 5px;
+    margin-left: 6px;
+}
+
+.texto-aula {
+    text-align: start;
+    margin-left: 65px;
+    color: lightgray;
+    font-weight: bold;
+    max-width:630px;
+}
+
+.animacao {
+    color: white;
+    text-align: end;
+    margin:  0px 100px 220px 0 ;
+}
+
+.titulo-aula {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 60px 0 20px 0;
+    border-bottom: 2px solid lightgray;
+    display: inline-block;
+}
+
+.assunto-aula {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 10px;  
+}
+
+.data-aula {
+    font-size:22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.conteudo-aula {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/*Cascata da aula 1*/
+
+div#aula1 {
+    position: absolute;
+    left: 100%;
+    top: 5%;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 45px;
+}
+
+div#aula1.ativar {
+    display: inline;
+    animation: position 1s ease;
+    left: 0;
+}
+
+@keyframes position {
+    from {
+        left: 100%;
+    } to {
+        left: 0;
+    }
+}
+
+.texto-grifado {
+    color: lightgreen;
+}
+
+.link-grifado {
+    color:white;
+    text-decoration: none;
+}
+
+.link-grifado:hover {
+    text-decoration: underline;
+}
+
+.topicos-aula-1 {
+    margin-top: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    padding-bottom: 35px;
+    position: absolute;
+    top: 0;
+    max-width: 50vw;
+    left: 55%;
+}
+
+/* Cascata da aula 2 */
+
+div#aula2 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 45px;
+}
+
+div#aula2.ativar {
+    display: inline;
+    animation: position 1s ease;
+    left: 0;
+}
+
+
+/*Estilização da aula 3*/
+
+.aula-topicos3 {
+    margin-top: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    padding-bottom: 35px;
+    position: absolute;
+    top: 0;
+    max-width: 50vw;
+    left: 55%;
+}
+
+div#aula3 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 45px;
+}
+
+div#aula3.ativar {
+    display: inline;
+    animation: position 1s ease;
+    left: 0;
+}
+
+/*Estilização da aula 4*/
+
+div#aula4 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 45px;
+}
+
+div#aula4.ativar {
+    display: inline;
+    animation: position 1s ease;
+    left: 0;
+}
+
+.topicos-texto-4 {
+    margin-top: 50px;
+    font-family: monospace;
+    font-weight: bold;
+    padding-bottom: 35px;
+    position: absolute;
+    top: 0;
+    max-width: 50vw;
+    left: 55%;
+}
+
+.titulo-exercicio {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 5px 0 5px 0;
+}
+
+#explicacao-exercicio {
+    text-transform: uppercase;
+    margin-top:10px;
+}
+
+.quadro {
+    margin-top: 15px;
+}
+
+.titulo-quadro {
+    color:white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.conjuncoes-quadro {
+    display:flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+#so {
+    border: 2px solid black;
+    background-color: lightgreen;
+    color:black;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#and {
+    color:#fff;
+    background-color:red;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+}
+
+#because {
+    color:black;
+    border: 2px solid black;
+    background-color:yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+}
+
+#but {
+    color:black;
+    background-color: lightskyblue;
+    padding: 2px;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#or {
+    color:black;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+    background-color: pink;
+}
+
+#for {
+    color:black;
+    background-color:yellowgreen;
+    border: 2px solid black;
+    padding:2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#when {
+    color:#fff;
+    border: 2px solid black;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff1ac6;
+}
+
+#despite {
+    color:white;
+    border: 2px solid black;
+    padding: 3px;
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color:#262626;
+}
+
+#even-thoug {
+    color:black;
+    background-color: #006699;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+}
